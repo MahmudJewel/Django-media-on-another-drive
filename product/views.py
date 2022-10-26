@@ -48,6 +48,7 @@ def update_product(request, pk):
             # print('Product form=> ', productForm)
             return redirect("/")
     context = {
-        'productForm': productForm
+        'productForm': productForm,
+        'product':product
     }
     return render(request, template_name, context)
