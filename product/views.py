@@ -35,3 +35,19 @@ def create_product(request):
         'productForm': productForm
     }
     return render(request, template_name, context)
+
+
+def update_product(request, pk):
+    template_name = 'update_product.html'
+    product = ProductInfo.objects.get(id=pk)
+    productForm = ProductInfoForm(instance=product)
+    if request.method == 'POST':
+        productForm = ProductInfoForm(request.POST, request.FILES, instance=product)
+        if productForm.is_valid():
+            productForm.save()
+            # print('Product form=> ', productForm)
+            return redirect("/")
+    context = {
+        'productForm': productForm
+    }
+    return render(request, template_name, context)

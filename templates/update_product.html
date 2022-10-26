@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row">
+        <h2 class="text-center" style="color: green;">Update Product</h2>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-6 form-group">
+                <label for="demo">Name</label>
+                {{productForm.name}}
+            </div>
+            <div class="col-6 form-group">
+                <label for="demo">Price</label>
+                {{productForm.price}}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="demo">Descriptions</label>
+            {{productForm.descriptions}}
+        </div>
+        <br>
+        <div class="row">
+            <label for="demo">Image</label>
+            {{productForm.img}}
+        </div>
+        <br>
+        <!-- <div>
+            New form
+        </div>
+        {{productForm.as_p}} -->
+
+        <div class="row">
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+<div>
+
+</div>
+
+{% endblock %}
