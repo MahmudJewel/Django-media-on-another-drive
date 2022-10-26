@@ -139,4 +139,3 @@ MEDIA_ROOT = os.path.join('/run/media/mahmud/Project/Practice/Django/storage', '
 
 MEDIA_URL = "/media/"  # it will help to access static directory through browser
 # *************** End static and media files *********************************
-

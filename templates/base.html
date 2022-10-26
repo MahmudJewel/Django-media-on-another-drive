@@ -54,10 +54,10 @@
                 " aria-current="page" href="{{ urll }}">{{cat}}</a>
                     </li>
                     <li class="nav-item me-2 mb-lg-0 mb-3">
-                        <a class="btn textColor" aria-current="page" href="#">Add Product</a>
+                        <a class="btn textColor" aria-current="page" href="/product/create/">Add Product</a>
                     </li>
                 </ul>
-                <form class="d-flex" method="post" action="/search">
+                <form class="d-flex" method="post" action="/">
                     {% csrf_token %}
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                         name="search" value="{{search}}" />
@@ -77,7 +77,7 @@
     </div>
     <br /><br /><br />
     <!-- content  -->
-    <div style="min-height: 100vh;">
+    <div class="container" style="min-height: 100vh;">
         {% block content %}
         {% endblock %}
     </div>

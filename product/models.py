@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here.
 
 
@@ -8,7 +7,7 @@ class ProductInfo(models.Model):
     price = models.PositiveIntegerField()
     descriptions = models.TextField(null=True, blank=True)
     img = models.ImageField(default="product/default.png",
-                            upload_to="product/", null=True, blank=True)
+                            upload_to="product/")
 
     def __str__(self):
         return self.name

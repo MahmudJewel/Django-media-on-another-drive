@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="row mt-4 pt-4">
+        <br><br> <br><br>
+        <!-- products details  -->
+        <div class="col-6">
+            <br><br><br>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Name: <span style="color: gray;">{{product.name}}</span></h3>
+                </div>
+                <div class="col-6">
+                    <h3>Price: <span style="color: green;">{{product.price}}</span> tk</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>Descriptions:
+                        <span style="color: gray;">{{product.descriptions}}</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- image part  -->
+        <div class="col-5 ms-5">
+            <img src="{{ product.img.url }}" alt="" width="500px">
+        </div>
+    </div>
+</div>
+{% endblock %}
