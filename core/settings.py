@@ -73,20 +73,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -104,9 +96,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -116,13 +105,8 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -134,8 +118,8 @@ STATICFILES_DIRS = [  # Search during collectstatic
 # collectstatic==> automatically created 'djangoStatic' folder.
 STATIC_ROOT = os.path.join(BASE_DIR, 'djangoAutoStatic')
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # for imagefield
-MEDIA_ROOT = os.path.join('/run/media/mahmud/Project/Practice/Django/storage', 'media')  # for imagefield
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # default settings
+MEDIA_ROOT = os.path.join('/run/media/mahmud/Project/Practice/Django/storage', 'media')  # customized drive
 
 MEDIA_URL = "/media/"  # it will help to access static directory through browser
 # *************** End static and media files *********************************
