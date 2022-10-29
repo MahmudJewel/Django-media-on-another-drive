@@ -1,6 +1,6 @@
 ﻿# Media on another drive
-This is a project for changing media route on another drive.
-Thange route as bellow:
+This is a project for changing media route on another drive. This is also a CRUD based web app for product creation, edition.
+Change the route as bellow:
 ```sh
 $ PATH = '/run/media/mahmud/Project/Practice/Django/storage'
 $ MEDIA_ROOT = os.path.join(PATH, 'media')
